@@ -39,6 +39,9 @@ function App() {
     const newProducts = products.filter(product => product.id !== productId);
     setProducts(newProducts);
   }
+  useEffect(() => {
+    console.log('Use Effect Running');
+  });
  
   return (
     <div>
