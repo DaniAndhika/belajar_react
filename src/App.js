@@ -34,10 +34,15 @@ function App() {
     {id: 4, title: 'Product 4', price: 763},
     {id: 5, title: 'Product 5', price: 389}
   ]);
+
+  const deleteProduct = (productId) => {
+    const newProducts = products.filter(product => product.id !== productId);
+    setProducts(newProducts);
+  }
  
   return (
     <div>
-      <ProductList products={ products } />
+      <ProductList products={ products } deleteProduct={ deleteProduct }/>
     </div>
   );
 }
