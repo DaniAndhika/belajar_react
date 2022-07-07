@@ -23,7 +23,7 @@
 // }
 
 // export default App;
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import ProductList from "./components/ProductList";
  
 function App() {
