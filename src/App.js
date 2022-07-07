@@ -24,6 +24,7 @@
 
 // export default App;
 import { useState } from "react"
+import ProductList from "./components/ProductList";
  
 function App() {
   const [products, setProducts] = useState([
@@ -36,11 +37,7 @@ function App() {
  
   return (
     <div>
-      <ul>
-        {products.map((product) => (
-          <li key={ product.id }> { product.title } - { product.price } </li>
-        ))}
-      </ul>
+      <ProductList products={ products } />
     </div>
   );
 }
