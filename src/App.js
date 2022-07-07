@@ -35,17 +35,21 @@ function App() {
     {id: 5, title: 'Product 5', price: 389}
   ]);
 
+  const [name, setName] = useState('Dani');
+  
   const deleteProduct = (productId) => {
     const newProducts = products.filter(product => product.id !== productId);
     setProducts(newProducts);
   }
   useEffect(() => {
     console.log('Use Effect Running');
-  });
+  }, [name]);
  
   return (
     <div>
       <ProductList products={ products } deleteProduct={ deleteProduct }/>
+      <button onClick={ () => setName('John') }>Change Name</button>
+      <p>Name: { name }</p>
     </div>
   );
 }
