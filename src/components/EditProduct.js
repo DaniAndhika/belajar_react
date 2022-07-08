@@ -28,7 +28,7 @@ const EditProduct = () => {
                 'Content-Type': 'application/json'
             }
         });
-        Navigate.push("/");
+        Navigate("/");
     }
  
     return (

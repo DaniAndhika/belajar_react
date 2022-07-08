@@ -23,11 +23,12 @@
 // }
 
 // export default App;
-import { useState} from "react"
+import Header from "./components/Header";
 import ProductList from "./components/ProductList";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import {Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { useState, useEffect} from "react"
 import AddProduct from "./components/AddProduct";
 import EditProduct from "./components/EditProduct";
  
@@ -47,13 +48,15 @@ function App() {
  
   return (
     <div className="container">
-    <div className="columns">
-    <div className="column is-half is-offset-one-quarter">
+      <div className="columns">
+        <div className="column is-half is-offset-one-quarter">
       <Router>
         <Routes>
           <Route exact path="/" element={<ProductList/>}/>
           <Route path="/about" element={<About/>}/>
           <Route path="/contact" element={<Contact/>}/>
+          <Route path="/add" element={<AddProduct/>}/>
+        <Route path="/edit/:id" element={<EditProduct/>}/>
 
         </Routes>
       </Router>

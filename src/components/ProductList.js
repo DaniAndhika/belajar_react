@@ -11,13 +11,13 @@ const ProductList = () => {
     }, []);
  
     const fetchData = async() => {
-        const response = await fetch('http://localhost:8080/products');
+        const response = await fetch('http://localhost:2000/products');
         const data = await response.json();
         setProducts(data);
     }
  
     const deleteProduct = async(id) => {
-        await fetch(`http://localhost:8080/products/${id}`,{
+        await fetch(`http://localhost:2000/products/${id}`,{
             method: "DELETE",
             headers:{
                 'Content-Type': 'application/json'
