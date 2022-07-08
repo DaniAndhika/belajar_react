@@ -28,6 +28,8 @@ import ProductList from "./components/ProductList";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import AddProduct from "./components/AddProduct";
+import EditProduct from "./components/EditProduct";
  
 function App() {
   const [products, setProducts] = useState([
@@ -44,7 +46,9 @@ function App() {
   }
  
   return (
-    <div>
+    <div className="container">
+    <div className="columns">
+    <div className="column is-half is-offset-one-quarter">
       <Router>
         <Routes>
           <Route exact path="/" element={<ProductList/>}/>
@@ -53,6 +57,8 @@ function App() {
 
         </Routes>
       </Router>
+    </div>
+    </div>
     </div>
   );
 }
