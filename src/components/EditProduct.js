@@ -12,7 +12,7 @@ const EditProduct = () => {
     }, []);
  
     const getProductById = async() => {
-        const response = await fetch(`http://localhost:8080/products/${id}`);
+        const response = await fetch(`http://localhost:2000/products/${id}`);
         const data = await response.json();
         setTitle(data.title);
         setPrice(data.price);
@@ -21,7 +21,7 @@ const EditProduct = () => {
     const updateProduct = async(e) => {
         e.preventDefault();
         const product = { title, price };
-        await fetch(`http://localhost:8080/products/${id}`,{
+        await fetch(`http://localhost:2000/products/${id}`,{
             method: "PUT",
             body: JSON.stringify(product),
             headers:{
