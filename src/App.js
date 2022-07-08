@@ -23,9 +23,9 @@
 // }
 
 // export default App;
-import { useState } from "react"
+import { useState} from "react"
 import ProductList from "./components/ProductList";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import About from "./components/About";
 import Contact from "./components/Contact";
  
